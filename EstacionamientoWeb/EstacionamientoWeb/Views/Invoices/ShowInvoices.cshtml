@@ -1,0 +1,55 @@
+﻿<table class="table">
+    <tr>
+        <th>
+            Vehicle Id
+        </th>
+        <th>
+            Date
+        </th>
+        <th>
+            Maintenance
+        </th>
+        <th>
+            Tax
+        </th>
+        <th>
+            CostByStyle
+        </th>
+        <th>
+            Profit
+        </th>
+        <th>
+            Total
+        </th>
+
+    </tr>
+
+    @foreach (var invoice in ViewBag.Invoices)
+    {
+        <tr>
+            <td>
+                @invoice.VehicleId
+            </td>
+            <td>
+                @invoice.Date
+            </td>
+            <td>
+                @invoice.Maintenance
+            </td>
+            <td>
+                @invoice.Tax
+            </td>
+            <td>
+                @invoice.CostByStyle
+            </td>
+            <td>
+                @invoice.Profit
+            </td>
+            <td>
+                @invoice.Total
+            </td>
+        </tr>
+    }
+
+</table>
+@Html.ActionLink("Back", "Index")

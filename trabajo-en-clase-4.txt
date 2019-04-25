@@ -1,0 +1,18 @@
+﻿tarea para el 24 de abril
+haga un proyecto del tipo Web Site que cumpla con las siguientes características:
+- alguna validación custom
+- Tenga dos controladores A y B escafoldeados para CRUD de algunas tablas
+- Tenga dos roles:
+	+ administrador
+		* accede al crud A y no al B
+	+ operario
+		* accede al crud B y no al A
+- Tenga dos usuarios definidos en cada uno de los roles
+- Tenga un controlador para realizar el proceso de salida de los automóviles, que considere:
+	+ fecha y hora de salida
+	+ monto desglosado de la factura
+		+ mantenimiento
+		+ impuesto
+		+ costo diferenciado por tipo de vehículo
+		+ ganancia
+		+ total a pagar

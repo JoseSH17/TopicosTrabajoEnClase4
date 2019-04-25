@@ -1,0 +1,69 @@
+﻿@{
+    var carx = ViewBag.Cars;
+}
+
+<table class="table">
+    <tr>
+        <th>
+            Brand
+        </th>
+        <th>
+            Model
+        </th>
+        <th>
+            Style
+        </th>
+        <th>
+            Year
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var car in carx)
+    {
+        <tr>
+            <td>
+                @car.Brand
+            </td>
+            <td>
+                @car.Model
+            </td>
+            <td>
+                @car.Style
+            </td>
+            <td>
+                @car.Year
+            </td>
+            <td>
+                @if (true)
+                {
+                    @Html.ActionLink("Create Invoice", "Create",
+                        new {
+                            VehicleId = car.VehicleId,
+                            Brand = car.Brand,
+                            Model = car.Model,
+                            Style = car.Style,
+                            Year = car.Year
+                        } ,null)
+                }
+
+            </td>
+            <td>
+                @if (true)
+                {
+                    @Html.ActionLink("Show Invoices", "ShowInvoices",
+                        new {
+                            VehicleId = car.VehicleId,
+                            Brand = car.Brand,
+                            Model = car.Model,
+                            Style = car.Style,
+                            Year = car.Year
+                        } ,null)
+                }
+
+            </td>
+        </tr>
+    }
+
+</table>
+
